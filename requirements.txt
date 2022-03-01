@@ -30,3 +30,6 @@ termcolor
 
 # Visualization
 plotly
+
+# Deep Learning
+tensorflow
