@@ -1,0 +1,48 @@
+;;;;
+;Datenbereitsteller:;;;
+;"Senatsverwaltung für Umwelt, Mobilität, Verbraucher- und Klimaschutz
+Abt. VI - Verkehrsmanagement 
+E-Mail: verkehrsmanagement@senuvk.berlin.de";;;
+;;;;
+;;;;
+;Hinweise:;;;
+;;;;
+;Auf den folgenden Tabellenblättern finden Sie die Rohdaten der Zählstellen für den Radverkehr in Berlin. Rohdaten sind Daten, die direkt aus den Zählgeräten der Dauerzählstellen ausgelesen und nicht weiter bearbeitet werden. ;;;
+;Die Daten werden einmal jährlich nach Abschluss des Zähljahres zusammengestellt und veröffentlicht.;;;
+;;;;
+;Bei der Auswertung und Interpretation der Daten sind folgende Randbedingungen zu beachten:;;;
+;       •              unterschiedliche Zeitpunkte für die Inbetriebnahme der Zählstellen, ;;;
+;       •              unterschiedliche klimatische Bedingungen (Temperatur, Sonnen- und Regentage, Schnee, Glatteis, Unwetter) und;;;
+;       •              Datenlücken z. B durch Batterieausfall, defekte Zählgeräte, defekte Induktionsschleifen oder Ausfall der Datenübertragung.;;;
+;;;;
+;Weiterhin können die Ergebnisse der Messstellen durch folgende Faktoren beeinflusst werden:;;;
+;       •              Umleitungen oder Baustellen im direkten Umfeld der Zählstellen, ;;;
+;       •              Besonderheiten im ÖPNV, z.B. Ersatzverkehre (z.B. der SEV 11-12/2017 in der Berliner Straße in Pankow), ;;;
+;       •              geänderte Verkehrsführung am Messquerschnitt oder;;;
+;       •              Änderungen im Radwegenetz (Auswirkungen auf die Routenwahl). ;;;
+;;;;
+;Auch individuelles Verhalten von Radfahrenden, wie z.B. Personen, die den Radweg in entgegengesetzter Richtung benutzen und damit die Zählstelle in falscher Richtung überfahren, können richtungsbezogene Ergebnisse verzerren.  ;;;
+;;;;
+;Nutzungsbedingungen und Haftungsbeschränkung;;;
+;;;;
+;"(1) Jede Nutzung ist unter den Bedingungen der „Datenlizenz Deutschland – Namensnennung – Version 2.0"" und zusätzlich zu den in
+ Absatz 4 genannten zulässig.";;;
+;;;;
+;Die bereitgestellten Daten und Metadaten dürfen für die kommerzielle und nicht kommerzielle Nutzung insbesondere;;;
+;"1. vervielfältigt, ausgedruckt, präsentiert, verändert, bearbeitet sowie an Dritte übermittelt werden;";;;
+;"2. mit eigenen Daten und Daten Anderer zusammengeführt und zu selbständigen neuen Datensätzen verbunden werden;";;;
+;"3. in interne und externe Geschäftsprozesse, Produkte und Anwendungen in öffentlichen und nicht öffentlichen elektronischen
+ Netzwerken eingebunden werden.";;;
+;;;;
+;(2) Bei der Nutzung ist sicherzustellen, dass folgende Angaben als Quellenvermerk enthalten sind:;;;
+;;;;
+;1. Bezeichnung des Bereitstellers,;;;
+;"2. der Vermerk „Datenlizenz Deutschland – Namensnennung – Version 2.0"" oder „dl-de/by-2-0"" 
+mit Verweis auf den Lizenztext unter www.govdata.de/dl-de/by-2-0 sowie";;;
+;3. ein Verweis auf den Datensatz (URI).;;;
+;;;;
+;"(3) Veränderungen, Bearbeitungen, neue Gestaltungen oder sonstige Abwandlungen sind im Quellenvermerk mit dem Hinweis 
+zu versehen, dass die Daten geändert wurden.";;;
+;;;;
+;"(4) Die Bereitstellung der Daten erfolgt unter Ausschluss jeder Haftung für direkte und indirekte Schäden durch die Datennutzung. Der Eigentümer der Daten bemüht sich, aussagekräftige Informationen zur Qualtität der Daten, z.B. hinsichtlich Aktualität,
+ Richtigkeit, Vollständigkeit und Genauigkeit der veröffentlichen Daten bereitzustellen, wobei keine Garantie hinsichtlich der Qualität übernommen wird. Der Datenabnehmer haftet für alle Schäden, die durch die Verarbeitung oder Nutzung der Daten durch den Datenabnehmer entstehen. Der Datenabnehmer stellt den Datenbereitsteller von allen Ansprüchen Dritter frei.";;;
