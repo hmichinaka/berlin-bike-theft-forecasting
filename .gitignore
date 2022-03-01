@@ -3,7 +3,6 @@
 .ipynb_checkpoints
 .DS_Store
 data/
-*.csv
 **/__pycache__/
 .env
 .python-version
