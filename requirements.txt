@@ -39,3 +39,7 @@ folium
 geopandas
 pyproj
 mapclassify
+plotly
+
+# deployment
+streamlit
