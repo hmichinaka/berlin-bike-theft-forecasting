@@ -1,7 +1,6 @@
 # URL Download
 import csv
 import io
-import urllib.request
 import requests
 
 import pandas as pd

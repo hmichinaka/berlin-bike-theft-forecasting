@@ -1,3 +1,42 @@
+from venv import create
+import importlib
+
+import numpy as np
+from keras.layers import Dense, LSTM, Dropout
+from tensorflow.keras import Sequential, callbacks
 from berlin-bike-theft-forecasting.theft_data import create_modelling_dataframe
 
-df = cre
+def create_opt_model():
+    """
+    Creates the finetuned model selected in B_Theft_Modelling
+    Outputs models, that needs to be compiled and fit"""
+    model = Sequential()
+    # first LSTM layer
+    model.add(LSTM(units = 70, activation = "tanh", return_sequences = True))
+    model.add(Dropout(0.2))
+    # second LSTM layer
+    model.add(LSTM(units= 30, activation= "tanh", return_sequences= False))
+    model.add(Dropout(0.2))
+
+    # output layer to predict one value
+    model.add(Dense(1, activation= "linear"))
+    return model
+
+def get_X_y(dataset, window_size, future_horizon):
+    """Creates arrays to be fed into the RNN model
+    Input: dataframe after create_modelling_dataframe, window_size and future_horizon
+    Output: Arrays for X and y
+    """
+    X = []
+    y = []
+
+    for i in range(0, dataset.shape[0] - window_size - future_horizon):
+        X.append(dataset[i: i + window_size])
+        y.append(dataset[i + window_size: i + window_size + future_horizon])
+
+    return np.array(X), np.array(y)
+
+
+
+
+def

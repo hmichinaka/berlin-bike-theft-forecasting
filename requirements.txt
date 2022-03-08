@@ -7,13 +7,8 @@ wheel>=0.29
 # data science
 numpy
 pandas
-scikit-lear
+scikit-learn
 seaborn
-
-# csv
-urllib.request
-csv
-io
 
 # tests/linter
 black
@@ -43,3 +38,7 @@ glob
 folium
 geopandas
 pyproj
+
+# modelling
+keras
+tensorflow
