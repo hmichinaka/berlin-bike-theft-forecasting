@@ -4,7 +4,7 @@ import importlib
 import numpy as np
 from keras.layers import Dense, LSTM, Dropout
 from tensorflow.keras import Sequential, callbacks
-from berlin-bike-theft-forecasting.theft_data import create_modelling_dataframe
+from berlin_bike_theft_forecasting.theft_data import create_modelling_dataframe
 
 def create_opt_model():
     """
@@ -35,8 +35,5 @@ def get_X_y(dataset, window_size, future_horizon):
         y.append(dataset[i + window_size: i + window_size + future_horizon])
 
     return np.array(X), np.array(y)
-
-
-
 
 def

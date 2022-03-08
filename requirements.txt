@@ -30,9 +30,9 @@ joblib
 memoized-property
 termcolor
 config
-logging
+#logging
 datetime
-glob
+
 
 # mapping
 folium
