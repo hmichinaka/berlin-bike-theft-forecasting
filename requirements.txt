@@ -42,3 +42,7 @@ pyproj
 # modelling
 keras
 tensorflow
+
+# model deployment
+fastapi
+uvicorn

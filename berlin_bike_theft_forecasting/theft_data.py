@@ -1,6 +1,7 @@
 # URL Download
 import csv
 import io
+from venv import create
 import requests
 
 import pandas as pd
@@ -106,7 +107,7 @@ def clean_theft_data(d):
 def pivot_theft_data(d):
     """Groups dataframe by Bezirk and returns sum of thefts for
     each Bezirk and day (date_theft_start)"""
-    d = d.pivot_table(index = "date_theft_start", columns = "Bezirk", values = "type_bike", aggfunc= "count")
+    d = d.pivot_table(index = "date_reported", columns = "Bezirk", values = "type_bike", aggfunc= "count")
     d.fillna(value = 0, inplace=True)
     return d
 
@@ -126,7 +127,7 @@ def calculate_rolling_average(df, window_size):
     """Calculate rolling average over the last window_size days.
     Fills missing values with mean of the last window_size days"""
     fill_value = df["total"][-window_size:].mean()
-    df["total_moving_average"] = df["total"].rolling(window = window_size, center = True).mean().fillna(fill_value)
+    df["total_moving_average"] = df["total"].rolling(window = window_size, center = False).mean().fillna(fill_value)
 
 
 
