@@ -106,7 +106,7 @@ def clean_theft_data(d):
 # Group by bezirk and sum up
 def pivot_theft_data(d):
     """Groups dataframe by Bezirk and returns sum of thefts for
-    each Bezirk and day (date_theft_start)"""
+    each Bezirk and day (date_reported)"""
     d = d.pivot_table(index = "date_reported", columns = "Bezirk", values = "type_bike", aggfunc= "count")
     d.fillna(value = 0, inplace=True)
     return d
