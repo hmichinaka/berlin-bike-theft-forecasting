@@ -5,6 +5,9 @@ from berlin_bike_theft_forecasting.theft_data import *
 
 from berlin_bike_theft_forecasting.theft_modelling import *
 
+import warnings
+warnings.filterwarnings("ignore")
+
 def save_model_locally(model):
     """Save the model into a .joblib format"""
     joblib.dump(model, 'model.joblib')

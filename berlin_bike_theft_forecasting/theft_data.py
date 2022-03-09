@@ -133,7 +133,7 @@ def calculate_rolling_average(df, window_size):
 
 # Calculate the total number of reported stolen bikes in the last 365 days
 def bikes_stolen_365():
-    """returns total bikes stolen in the last 365 days in Berlin"""
+    """returns total bikes reported stolen in the last 365 days in Berlin"""
     df = load_data()
     df = clean_theft_data(df)
     df = pivot_theft_data(df)
@@ -145,7 +145,8 @@ def bikes_stolen_365():
 
 # Calculates "Every XX minutes a bike is reported as stolen in Berlin"
 def theft_frequency():
-    """returns frequency (in minutes) of bikes stolen in Berlin in the last 365 days"""
+    """returns frequency (in minutes) of bikes being reported as
+    stolen in Berlin in the last 365 days"""
     minutes_day=1440
     minutes_year=1440*365
     return round(minutes_year/bikes_stolen_365())
@@ -178,6 +179,35 @@ def create_modelling_dataframe():
 
     return df
 
+# calculates the mean estimated value of all reported stolen bikes
+def mean_estimated_value():
+    """Returns the mean of "estimated value" of all stolen bikes.
+    "Kellereinbruch" is filtered out
+    """
+    df = load_data()
+    df= clean_theft_data(df)
+    cond = df["theft_type"] != "Keller- und Bodeneinbruch"
+    df = df[cond]
+    return f"The mean estimated value of a reported stolen bike is {round(df.estimated_value.mean())} Euro"
+
+
+def hourly_count_stolen_bikes():
+    """Creates a line plot of the number of stolen bikes by hour_theft_start
+    """
+
+    df = load_data()
+    df = clean_theft_data(df)
+
+    count_per_hour = df.groupby("hour_theft_start").count()
+    count_per_hour = count_per_hour[["date_reported"]].reset_index()
+    count_per_hour["count_stolen"] = count_per_hour["date_reported"]
+    fig = px.line(count_per_hour, x='hour_theft_start', y='count_stolen',
+                title='Berlin: Hourly count of stolen bikes from 2021-01-01',
+                labels={"hour_theft_start": "Assumed hour of theft", "count_stolen": "Number of stolen bikes"})
+
+    fig.show()
+
+
 if __name__ == "__main__":
-    df = create_modelling_dataframe()
-    print(df.head())
+    #df = create_modelling_dataframe()
+    #print(df.head())
