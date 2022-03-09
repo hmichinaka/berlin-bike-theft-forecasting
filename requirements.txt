@@ -54,3 +54,6 @@ streamlit-folium
 # twitter
 tweepy
 
+#visualisation
+plotly
+
