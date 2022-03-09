@@ -46,3 +46,8 @@ tensorflow
 # model deployment
 fastapi
 uvicorn
+
+# streamlit
+streamlit
+streamlit-folium
+

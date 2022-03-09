@@ -7,3 +7,5 @@ data/
 .env
 .python-version
 raw_data/
+pickle/
+data/nextbike*
