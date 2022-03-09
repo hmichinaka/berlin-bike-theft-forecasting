@@ -26,19 +26,21 @@ def load_data():
 ###  Clean data ######
 
 #dict to translate from German to English
-eng_col_names = {
-    "ANGELEGT_AM": "date_reported",
-    "TATZEIT_ANFANG_DATUM": "date_theft_start",
-    "TATZEIT_ANFANG_STUNDE": "hour_theft_start",
-    "TATZEIT_ENDE_DATUM": "date_theft_end",
-    "TATZEIT_ENDE_STUNDE": "hour_theft_end",
-    "LOR": "LOR",
-    "SCHADENSHOEHE": "estimated_value",
-    "VERSUCH": "attempt",
-    "ART_DES_FAHRRADS": "type_bike",
-    "DELIKT": "theft_type",
-    "ERFASSUNGSGRUND": "theft_type_detail"
-}
+def translate_col_names(d):
+    eng_col_names = {
+        "ANGELEGT_AM": "date_reported",
+        "TATZEIT_ANFANG_DATUM": "date_theft_start",
+        "TATZEIT_ANFANG_STUNDE": "hour_theft_start",
+        "TATZEIT_ENDE_DATUM": "date_theft_end",
+        "TATZEIT_ENDE_STUNDE": "hour_theft_end",
+        "LOR": "LOR",
+        "SCHADENSHOEHE": "estimated_value",
+        "VERSUCH": "attempt",
+        "ART_DES_FAHRRADS": "type_bike",
+        "DELIKT": "theft_type",
+        "ERFASSUNGSGRUND": "theft_type_detail"
+    }
+    d.rename(columns= eng_col_names, inplace=True)
 
 # define function for renaming the categories
 def rename_type_bike(x):
@@ -69,7 +71,7 @@ def clean_theft_data(d):
     """Takes in the pd Dataframe created in load_data() and
     returns a clean dataframe"""
     #translate columns to English
-    d.rename(columns= eng_col_names, inplace=True)
+    translate_col_names(d)
 
     #translate bike type to English
     d["type_bike"] = d["type_bike"].apply(rename_type_bike)
@@ -129,6 +131,24 @@ def calculate_rolling_average(df, window_size):
     fill_value = df["total"][-window_size:].mean()
     df["total_moving_average"] = df["total"].rolling(window = window_size, center = False).mean().fillna(fill_value)
 
+# Calculate the total number of reported stolen bikes in the last 365 days
+def bikes_stolen_365():
+    """returns total bikes stolen in the last 365 days in Berlin"""
+    df = load_data()
+    df = clean_theft_data(df)
+    df = pivot_theft_data(df)
+    df['Total'] = df.sum(axis=1)
+    df = pd.DataFrame(df["Total"])
+    df =df[-365:]
+    total_stolen_365=df.sum().values[0]
+    return int(total_stolen_365)
+
+# Calculates "Every XX minutes a bike is reported as stolen in Berlin"
+def theft_frequency():
+    """returns frequency (in minutes) of bikes stolen in Berlin in the last 365 days"""
+    minutes_day=1440
+    minutes_year=1440*365
+    return round(minutes_year/bikes_stolen_365())
 
 
 # Create the dataframe for the modelling
@@ -140,14 +160,14 @@ def create_modelling_dataframe():
     df = load_data()
     # clean data
     df= clean_theft_data(df)
-    # group data by Bezirk and sum up
+    # group data by Bezirk and date_reported and sum up
     df = pivot_theft_data(df)
 
     # add "total column"
     df["total"] = df.sum(axis = 1)
 
     # cut-off the last three days
-    df.drop(df.tail(3).index,inplace=True)
+    # df.drop(df.tail(3).index,inplace=True)
 
     # calculate rolling average
     calculate_rolling_average(df, window_size = 3)
@@ -157,3 +177,7 @@ def create_modelling_dataframe():
     df = df[cols_list]
 
     return df
+
+if __name__ == "__main__":
+    df = create_modelling_dataframe()
+    print(df.head())
