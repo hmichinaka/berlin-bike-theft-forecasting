@@ -6,6 +6,8 @@ import requests
 import datetime
 import pandas as pd
 import numpy as np
+import plotly.express as px
+
 
 
 # Read in data from the Berlin Polizei URL
@@ -212,3 +214,4 @@ def hourly_count_stolen_bikes():
 if __name__ == "__main__":
     #df = create_modelling_dataframe()
     #print(df.head())
+    hourly_count_stolen_bikes()

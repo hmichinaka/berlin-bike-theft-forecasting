@@ -46,3 +46,6 @@ tensorflow
 # model deployment
 fastapi
 uvicorn
+
+# interactive plotting
+plotly
