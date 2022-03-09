@@ -186,7 +186,7 @@ def mean_estimated_value():
     """
     df = load_data()
     df= clean_theft_data(df)
-    cond = df["theft_type"] != "Keller- und Bodeneinbruch"
+    cond = np.logical_and(df["theft_type"] != "Keller- und Bodeneinbruch", df["date_reported"] >= start_date)
     df = df[cond]
     return f"The mean estimated value of a reported stolen bike is {round(df.estimated_value.mean())} Euro"
 
