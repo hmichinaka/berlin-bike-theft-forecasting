@@ -7,7 +7,7 @@ wheel>=0.29
 # data science
 numpy
 pandas
-scikit-lear
+scikit-learn
 seaborn
 
 # tests/linter
@@ -30,11 +30,19 @@ joblib
 memoized-property
 termcolor
 config
-logging
+#logging
 datetime
-glob
+
 
 # mapping
 folium
 geopandas
 pyproj
+
+# modelling
+keras
+tensorflow
+
+# model deployment
+fastapi
+uvicorn
