@@ -2,10 +2,9 @@
 .coverage
 .ipynb_checkpoints
 .DS_Store
-data/
 **/__pycache__/
 .env
 .python-version
-raw_data/
+raw_data/nextbike_livedata
 pickle/
 data/nextbike*
