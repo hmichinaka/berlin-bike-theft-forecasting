@@ -8,21 +8,23 @@ import json
 def app():
     '''Bike Theft Forecast'''
     st.title('3 Thefts - Prediction')
-    st.write("Bike theft prediction / Time Series - Machine Learning model")
 
+    pred_date = predict_next_day()["date_reported"][0]
 #1. Line chart showing last 31 days + predicted number of stolen bikes for tomorrow
 # ---> pred_ts_chart() function from predict.py
 
+    st.markdown(f"##### Number of reported stolen bikes in Berlin in the last 31 days and prediction for {pred_date:%d.%m.%Y} (red line)")
+
     fig = pred_ts_chart()
     st.plotly_chart(fig)
-    st.write("Data Source: Polizei Berlin")
+
 
 
 #2. Map showing predicted number of bikes stolen per Bezirk for tomorrow (build it from the provided df)
 # ---> prediction_by_Bezirk() function from predict.py
 
-    pred_date = predict_next_day()["date_reported"][0]
-    st.title(f"Predicted number of stolen bikes on {pred_date:%d.%m.%Y} by Bezirk")
+
+    st.markdown(f"##### Predicted number of stolen bikes on {pred_date:%d.%m.%Y} by Bezirk")
 
 
     f = open('raw_data/bezirksgrenzen.geojson')
@@ -54,4 +56,12 @@ def app():
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
     st.plotly_chart(fig)
 
-    st.write("Data Source: [Polizei Berlin](https://www.internetwache-polizei-berlin.de/vdb/Fahrraddiebstahl.csv)")
+    st.write("**Data Source**: [Polizei Berlin](https://www.internetwache-polizei-berlin.de/vdb/Fahrraddiebstahl.csv)  \n \
+        [Creative Commons Licence CC BY 3.0 DE](https://creativecommons.org/licenses/by/3.0/de/)")
+
+    st.write("##")
+    st.markdown("#### Machine Learning Model")
+    st.markdown("##### [Recurrent Neural Network](https://www.tensorflow.org/guide/keras/rnn) with 2 LSTM-layers \
+        [Long Term Short Memory](https://www.tensorflow.org/api_docs/python/tf/keras/layers/LSTM)")
+    st.markdown("###### Bike theft predicted values compared to actual values")
+    st.image("./images/prediction vs. actual.png")
