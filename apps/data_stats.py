@@ -19,7 +19,18 @@ def app():
     st.markdown("The LOR-data was transfered into GEOJSON.")
 
     st.markdown("**Data source accidents**:")
+    st.markdown("Road accidents 2018: [Amt für Statistik Berlin-Brandenburg](https://daten.berlin.de/datensaetze/strassenverkehrsunf%C3%A4lle-nach-unfallort-berlin-2018)  \n \
+        [Creative Commons Licence CC BY 3.0 DE](https://creativecommons.org/licenses/by/3.0/de/)")
+    st.markdown("Road accidents 2019: [Amt für Statistik Berlin-Brandenburg](https://daten.berlin.de/datensaetze/strassenverkehrsunf%C3%A4lle-nach-unfallort-berlin-2019)  \n \
+        [Creative Commons Licence CC BY 3.0 DE](https://creativecommons.org/licenses/by/3.0/de/)")
+    st.markdown("Road accidents 2020: [Amt für Statistik Berlin-Brandenburg](https://daten.berlin.de/datensaetze/strassenverkehrsunf%C3%A4lle-nach-unfallort-berlin-2020)  \n \
+        [Creative Commons Licence CC BY 3.0 DE](https://creativecommons.org/licenses/by/3.0/de/)")
+    st.markdown("Accidents not involving bikes were excluded.")
+
+    st.markdown("**Data Source Bezirke**:")
+    st.markdown("Geoportal Berlin / [Bezirke](https://daten.odis-berlin.de/de/dataset/bezirksgrenzen/)")
 
     st.markdown("**Data source Nextbike**:")
 
     st.markdown("**Data source GreenLane**:")
+    st.markdown("infravelo.de / [API](https://www.infravelo.de/api/)")
