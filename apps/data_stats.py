@@ -4,21 +4,22 @@ import pandas as pd
 from apps.create_data import create_table
 
 def app():
-    st.title('Data Stats')
+    st.title('Data Sources')
 
-    st.write("This is a sample data stats in the mutliapp.")
-    st.write("... to know how to use it.")
+    st.markdown("**Data Source bike thefts**:")
+    st.markdown("[Polizei Berlin](https://www.internetwache-polizei-berlin.de/vdb/Fahrraddiebstahl.csv)  \n \
+        [Creative Commons Licence CC BY 3.0 DE](https://creativecommons.org/licenses/by/3.0/de/)")
+    st.markdown("Dataset from Polizei Berlin that shows reported bike thefts starting from 01.01.2021 and is updated daily.\
+        Thefts for which the time of crime cannot be limited to 3 days are excluded. \
+            For the mean value break-ins into basements are excluded.")
 
-    st.markdown("### Plot Data")
-    # app.py, run with 'streamlit run app.py'
+    st.markdown("**Data Source Lebensweltlich orientierte Räume (LOR) in Berlin**:")
+    st.markdown("[Amt für Statistik Berlin-Brandenburg](https://www.stadtentwicklung.berlin.de/planen/basisdaten_stadtentwicklung/lor/de/download.shtml)  \n \
+        [Creative Commons Licence CC BY 3.0 DE](https://creativecommons.org/licenses/by/3.0/de/)")
+    st.markdown("The LOR-data was transfered into GEOJSON.")
 
+    st.markdown("**Data source accidents**:")
 
-    df = pd.read_csv("./data/accident_counts.csv")  # read a CSV file inside the 'data" folder next to 'app.py'
-    # df = pd.read_excel(...)  # will work for Excel files
+    st.markdown("**Data source Nextbike**:")
 
-    st.title("Hello world!")  # add a title
-    st.write(df)  # visualize my dataframe in the Streamlit app
-
-    #Deleted for data testing
-    #df = create_table()
-    #st.line_chart(df)
+    st.markdown("**Data source GreenLane**:")
