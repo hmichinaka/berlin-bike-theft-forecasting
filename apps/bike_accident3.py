@@ -142,4 +142,4 @@ def app():
     # display map
     folium_static(m)
     st.image("./images/bike_accident_clusters_legend.png")
-    st.markdown("Accidents clusters were modelled with [DBSCAN](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html).")
+    st.markdown("##### Accident clusters were modelled with [DBSCAN](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html).")
