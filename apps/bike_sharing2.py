@@ -15,6 +15,7 @@ def app():
 
     df_hour_mean = read_data('./data/nextbike_location_animation_mean.csv')
     df_hour_mean = round_up(df_hour_mean, 3)
+    df_hour_mean['hour'] = df_hour_mean['hour'].astype('int16')
 
     labels = {'value': 'Relative % (avg. = 0)', 'avg':'% of bikes', 'theft_count':'count', 'hourly_accident':'Relative % (min. = 0)'}
 
