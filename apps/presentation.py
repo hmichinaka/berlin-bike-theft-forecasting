@@ -18,7 +18,7 @@ def app():
 
     st.write("We offers you the following information in the visualized dashboard:")
     st.write("- Bike Traffic: Check out our mobility map when people use Bike Sharing service from 3 mil. of data points ")    
-bike distribution and mobility throout a day
+    #bike distribution and mobility throout a day
     st.write("- Bike Accident: Check our cluster analysis for the places where accidents happen often")    
     st.write("- Bike Theft: Experimental Bike Theft Forecasting by using a neural network model")    
     
