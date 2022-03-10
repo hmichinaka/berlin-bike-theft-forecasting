@@ -24,5 +24,7 @@ app.add_app("Data Stats", data_stats.app)
 app.add_app("Tweets abouts", app_tweets.app)
 app.add_app("Spare Page", new_app.app)
 
+app.add_app("Presentation", presentation.app)
+
 # The main app
 app.run()
