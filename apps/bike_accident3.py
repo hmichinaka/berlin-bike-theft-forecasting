@@ -43,3 +43,5 @@ def app():
 
     # display map
     folium_static(m)
+    
+    st.markdown("Accidents clusters were modelled with [DBSCAN](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html).")
