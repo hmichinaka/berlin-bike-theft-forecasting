@@ -1,5 +1,5 @@
 import streamlit as st
-from PIL import Image
+#from PIL import Image
 
 
 def app():
@@ -10,8 +10,7 @@ def app():
     st.markdown("##### 1. Bike theft risk")
     st.markdown("##### 2. Bike accident risk")
 
-    image = Image.open('./images/BikeTheft.png')
-    st.image(image, caption='bike theft')
+    st.image("./images/BikeTheft.png", caption='bike theft')
 
     st.markdown("### The Team")
 
