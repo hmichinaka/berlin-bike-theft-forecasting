@@ -4,6 +4,7 @@ import folium
 import geopandas as gpd
 from streamlit_folium import folium_static
 import pickle
+import requests
 
 def app():
     st.title('Accidents - Clusters')
