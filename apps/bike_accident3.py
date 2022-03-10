@@ -12,7 +12,7 @@ def app():
     st.markdown("#### Cluster analysis of bike accidents between 01.01.2018 and 31.12.2020.")
 
 #   create cluster_gdf (=hotspots)
-    #loading df from csv
+    ##loading df from csv
     cluster_gdf = pd.read_csv('./data/cluster_gdf.csv')
     #turn polygon column into GeoSeries
     cluster_gdf['polygon'] = gpd.GeoSeries.from_wkt(cluster_gdf['polygon'])
