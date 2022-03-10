@@ -23,7 +23,7 @@ google-cloud-storage
 mlflow
 s3fs
 requests
-re
+regex
 
 # utilities
 six>=1.14
