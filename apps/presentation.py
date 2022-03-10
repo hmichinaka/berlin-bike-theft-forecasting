@@ -24,7 +24,7 @@ def app():
 #    st.write("How can we use Machine Learning to mitigate")
 #    st.write("1. Bike theft risk")
 #    st.write("2. Bike accident risk")
-    st.image("./images/BikeTheft.jpg")
+    st.image("./images/BikeTheft.png")
 
     st.markdown("### The Team")
     st.image("./images/team.jpg")
