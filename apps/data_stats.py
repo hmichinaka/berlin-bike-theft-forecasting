@@ -31,6 +31,8 @@ def app():
     st.markdown("Geoportal Berlin / [Bezirke](https://daten.odis-berlin.de/de/dataset/bezirksgrenzen/)")
 
     st.markdown("**Data source Nextbike**:")
+    st.markdown("[Nextbike API](https://sharedmobility.github.io/Nextbike.html)")
+
 
     st.markdown("**Data source GreenLane**:")
     st.markdown("infravelo.de / [API](https://www.infravelo.de/api/)")
