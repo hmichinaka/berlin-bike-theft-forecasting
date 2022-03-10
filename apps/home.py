@@ -10,8 +10,9 @@ def app():
     st.markdown("#### - Bike Traffic: Bike distribution map gives you an idea about bike traffic throughout the day")    
     st.markdown("#### - Bike Accident: Cluster analysis shows you where the accident hot spots are")    
     st.markdown("#### - Bike Theft: Data analysis and forecasting thefts by districts might save your bike")
-
     st.image("./images/BikeTheft.png")
+
+    st.markdown("####")
 
     st.markdown("### The Team")
     st.image("./images/team.jpg")    
