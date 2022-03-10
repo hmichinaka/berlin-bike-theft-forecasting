@@ -53,3 +53,5 @@ def app():
                               )
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
     st.plotly_chart(fig)
+
+    st.write("Data Source: [Polizei Berlin](https://www.internetwache-polizei-berlin.de/vdb/Fahrraddiebstahl.csv)")
