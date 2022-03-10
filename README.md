@@ -12,8 +12,8 @@ Almost 85% of Berliner's own a bike. This project addresses the issue of safety 
 
 The product contains 4 key elements:
 - Locations - mapping of bike distribution in Berlin
-- Accidents - mapping of bike accident distribution & hot spots 
-- Thefts - bike theft data analysis & forecasting next day's bike theft number (RNN/LSTM model)
+- Accidents - mapping of bike accidents & their hot spots 
+- Thefts - bike theft data analysis & forecasting next day's bike theft number
 - Berlin bike tweets - lates tweets about bikes in Berlin
 
 Link to the app: https://share.streamlit.io/hmichinaka/berlin-bike-theft-forecasting/app.py
@@ -38,7 +38,6 @@ Streamlit (app was deployed via Streamlit Cloud)
 This project was the final project of 6 students who attended a Data Science bootcamp at Le Wagon Berlin between January-March 2022.
 
 ## Data Sources
-
 
 **Polizei Berlin:** https://www.internetwache-polizei-berlin.de/vdb/Fahrraddiebstahl.csv
 
