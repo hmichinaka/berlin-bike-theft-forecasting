@@ -9,7 +9,7 @@ import re
 
 def app():
     st.title('Accidents - Clusters')
-    st.markdown("#### Cluster analysis over the bike accidents between 01.01.2018 and 31.12.2020.")
+    st.markdown("#### Cluster analysis of bike accidents between 01.01.2018 and 31.12.2020.")
 
 #   create cluster_gdf (=hotspots)
     #loading df from csv
