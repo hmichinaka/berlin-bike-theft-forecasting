@@ -39,6 +39,7 @@ class MultiApp:
         })
 
     def run(self):
+        """returns a styled side bar within an app"""
         st.sidebar.title("cycle_safe(berlin) 🚲")
         st.markdown("## ")
         app = st.sidebar.radio(
