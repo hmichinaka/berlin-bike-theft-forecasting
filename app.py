@@ -1,7 +1,7 @@
 import streamlit as st
 from multiapp import MultiApp
 from apps import home, data_stats # import your app modules here
-from apps import new_app, app_tweets, bike_accident1, bike_accident2, bike_accident3, bike_sharing1, bike_sharing2, bike_theft1, bike_theft2, under_the_hood, presentation
+from apps import new_app, app_tweets, bike_accident1, bike_accident2, bike_accident3, bike_sharing1, bike_sharing2, bike_theft1, bike_theft2, under_the_hood, presentation, data_stats
 # import your app modules here
 
 app = MultiApp()
