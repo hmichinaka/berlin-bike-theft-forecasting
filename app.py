@@ -15,7 +15,7 @@ app.add_app("1 Accidents - Hourly", bike_accident2.app)
 app.add_app("1 Accidents - Clusters", bike_accident3.app)
 app.add_app("2 Locations - Area", bike_sharing1.app)
 app.add_app("2 Locations - Hourly ", bike_sharing2.app)
-app.add_app("3 Thefts - Area", bike_theft1.app)
+app.add_app("3 Thefts - Facts", bike_theft1.app)
 app.add_app("3 Thefts - Prediction", bike_theft2.app)
 app.add_app("4 Under the hood", under_the_hood.app)
 

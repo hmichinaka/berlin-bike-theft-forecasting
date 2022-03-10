@@ -189,7 +189,7 @@ def mean_estimated_value():
     start_date = datetime.datetime.today() - datetime.timedelta(365)
     cond = np.logical_and(df["theft_type"] != "Keller- und Bodeneinbruch", df["date_reported"] >= start_date)
     df = df[cond]
-    return f"The mean estimated value of a reported stolen bike is {round(df.estimated_value.mean())} Euro"
+    return round(df.estimated_value.mean())
 
 
 def hourly_count_stolen_bikes():
