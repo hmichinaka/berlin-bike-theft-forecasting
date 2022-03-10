@@ -18,7 +18,7 @@ def app():
     file1.close()
 
     file2 = open('./pickle/greenlane_df.pickle', 'rb')
-    cluster_gdf = pickle.load(file2)
+    final_df = pickle.load(file2)
     file2.close()
     
     #grouping final_df
