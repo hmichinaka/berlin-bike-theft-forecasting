@@ -56,9 +56,6 @@ def app():
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
     st.plotly_chart(fig)
 
-    st.write("**Data Source**: [Polizei Berlin](https://www.internetwache-polizei-berlin.de/vdb/Fahrraddiebstahl.csv)  \n \
-        [Creative Commons Licence CC BY 3.0 DE](https://creativecommons.org/licenses/by/3.0/de/)")
-
     st.write("##")
     st.markdown("#### Machine Learning Model")
     st.markdown("##### [Recurrent Neural Network](https://www.tensorflow.org/guide/keras/rnn) with 2 LSTM-layers \

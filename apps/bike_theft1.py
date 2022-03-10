@@ -21,16 +21,3 @@ def app():
     object_file = pickle.load(file)
     file.close()
     st.plotly_chart(object_file)
-
-
-    st.markdown("**Data Source bike thefts**:")
-    st.markdown("[Polizei Berlin](https://www.internetwache-polizei-berlin.de/vdb/Fahrraddiebstahl.csv)  \n \
-        [Creative Commons Licence CC BY 3.0 DE](https://creativecommons.org/licenses/by/3.0/de/)")
-    st.markdown("Dataset from Polizei Berlin that shows reported bike thefts starting from 01.01.2021 and is updated daily.\
-        Thefts for which the time of crime cannot be limited to 3 days are excluded. \
-            For the mean value break-ins into basements are excluded.")
-
-    st.markdown("**Data Source Lebensweltlich orientierte Räume (LOR) in Berlin**:")
-    st.markdown("[Amt für Statistik Berlin-Brandenburg](https://www.stadtentwicklung.berlin.de/planen/basisdaten_stadtentwicklung/lor/de/download.shtml)  \n \
-        [Creative Commons Licence CC BY 3.0 DE](https://creativecommons.org/licenses/by/3.0/de/)")
-    st.markdown("The LOR-data was transfered into GEOJSON.")

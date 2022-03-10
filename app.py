@@ -18,9 +18,7 @@ app.add_app("2 Locations - Hourly ", bike_sharing2.app)
 app.add_app("3 Thefts - Facts", bike_theft1.app)
 app.add_app("3 Thefts - Prediction", bike_theft2.app)
 app.add_app("4 Under the hood", under_the_hood.app)
-
-
-app.add_app("Data Stats", data_stats.app)
+app.add_app("Data Sources", data_stats.app)
 app.add_app("Tweets abouts", app_tweets.app)
 app.add_app("Spare Page", new_app.app)
 

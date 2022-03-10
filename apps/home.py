@@ -13,7 +13,7 @@ def app():
     st.image("./images/BikeTheft.png", caption='bike theft')
 
     st.markdown("### The Team")
-
+    st.image("./images/group_picture.jpg")
     st.markdown("##### Hitoshi Michinaka [Linkedin](https://www.linkedin.com/in/hmichinaka/)")
     st.markdown("##### Dominik Abratanski [Linkedin](https://www.linkedin.com/in/dominikabratanski/)")
     st.markdown("##### Lukas Hartung [Linkedin](https://www.linkedin.com/in/lukas-h-0438578b/)")
