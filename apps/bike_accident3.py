@@ -9,8 +9,8 @@ def app():
     st.write("Cluster analysis over the bike accidents between 01.01.2018 and 31.12.2020 (3 years).")
 
     # load dataframes
-    cluster_gdf = pd.read_pickle('data/cluster_gdf.pickle')
-    final_df = pd.read_pickle('data/greenlane_df.pickle')
+    cluster_gdf = pd.read_pickle('./pickle/cluster_gdf.pickle')
+    final_df = pd.read_pickle('./pickle/greenlane_df.pickle')
 
     #grouping final_df
     completed = final_df.coordinates[final_df.status == 'completed']
