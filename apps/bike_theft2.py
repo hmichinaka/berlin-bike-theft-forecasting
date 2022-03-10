@@ -1,6 +1,6 @@
 import streamlit as st
 from dataclasses import dataclass
-from apps.predict import pred_ts_chart, prediction_by_Bezirk
+from apps.predict import pred_ts_chart, prediction_by_Bezirk, predict_next_day
 import plotly.express as px
 import json
 
@@ -20,7 +20,10 @@ def app():
 
 #2. Map showing predicted number of bikes stolen per Bezirk for tomorrow (build it from the provided df)
 # ---> prediction_by_Bezirk() function from predict.py
-    st.title("Predicted number of stolen bikes tomorrow by Bezirk")
+
+    pred_date = predict_next_day()["date_reported"][0]
+    st.title(f"Predicted number of stolen bikes on {pred_date:%d.%m.%Y} by Bezirk")
+
 
     f = open('raw_data/bezirksgrenzen.geojson')
     geojson_berlin = json.load(f)
