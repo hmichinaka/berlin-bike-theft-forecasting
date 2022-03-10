@@ -16,6 +16,8 @@ def app():
     fig = pred_ts_chart()
     st.plotly_chart(fig)
     st.write("Data Source: Polizei Berlin")
+
+
 #2. Map showing predicted number of bikes stolen per Bezirk for tomorrow (build it from the provided df)
 # ---> prediction_by_Bezirk() function from predict.py
     st.title("Predicted number of stolen bikes tomorrow by Bezirk")
