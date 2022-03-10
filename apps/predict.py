@@ -67,7 +67,7 @@ def pred_ts_chart():
     # add the predicted value as the last value
     chart_df.iloc[-1, 1] = pred_df["total"][0]
 
-    fig = px.line(chart_df, x="date", y="total", title= "Number of reported stolen bikes in Berlin in the last 31 days and prediction for the next day (red line)")
+    fig = px.line(chart_df, x="date", y="total", title= f"Reported stolen bikes in Berlin in the last 31 days and prediction for {pred_date} (red line)")
     fig.add_scattergl(x=chart_df["date"].where(chart_df["date"] >=chart_df.iloc[-2,0]), y=chart_df["total"], line={"color": "red"},
                   showlegend=False)
 
