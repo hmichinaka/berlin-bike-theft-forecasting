@@ -32,7 +32,7 @@ def app():
                                center={'lat': 52.52, 'lon': 13.405},
                                labels=labels,
                               )
-#    fig.layout.updatemenus[0].buttons[0].args[1]["frame"]["duration"] = 1500
+    fig.layout.updatemenus[0].buttons[0].args[1]["frame"]["duration"] = 1750
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
     st.plotly_chart(fig)
 
