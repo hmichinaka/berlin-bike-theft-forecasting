@@ -16,6 +16,8 @@ The product contains 4 key elements:
 - Thefts - bike theft data analysis & forecasting next day's bike theft number (RNN/LSTM model)
 - Berlin bike tweets - lates tweets about bikes in Berlin
 
+Link to the app: https://share.streamlit.io/hmichinaka/berlin-bike-theft-forecasting/app.py
+
 ## Methods used
 
 Machine Learning (DBSCAN cluster analysis of accidents in Berlin)
@@ -23,6 +25,7 @@ Data Analysis
 Data Visualization (exploratory data analysis incl. mapping with plotly.express & folium) 
 Predictive Modeling (forecasting next day's bike theft count in Berlin with time series RNN/LSTM model)
 APIs (fetiching NextBike data for "Locations" part; obtaining latest bike tweets via Twitter API)
+Streamlit (app was deployed via Streamlit Cloud)
 
 ## Repository overview
 
