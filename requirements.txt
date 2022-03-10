@@ -51,3 +51,5 @@ uvicorn
 streamlit
 streamlit-folium
 
+# tweets
+tweepy
