@@ -2,6 +2,12 @@ import plotly.express as px
 import streamlit as st
 from apps.get_data import read_data, get_geojson, round_up
 import pickle
+import streamlit as st
+import pandas as pd
+import geopandas as gpd
+from streamlit_folium import folium_static
+import numpy as np
+
 
 def app():
 #    st.cache
@@ -41,12 +47,6 @@ def app():
     st.write("Data Source: Amt für Statistik Berlin-Brandenburg")
     
     
-import streamlit as st
-import pandas as pd
-import geopandas as gpd
-from streamlit_folium import folium_static
-import pickle
-import numpy as np
 
     st.title('1. Accidents - Yearly')
     st.write("Yearly bike accident counts between 01.01.2018 and 31.12.2020 (3 years)")
