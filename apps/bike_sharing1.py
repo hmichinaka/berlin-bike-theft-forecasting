@@ -11,4 +11,4 @@ def app():
     file.close()
     st.plotly_chart(object_file)
 
-    st.markdown("###### Total number of available NextBike (approx. 2200 bikes) over the period.")
+    st.markdown("###### Total number of available NextBikes over the analysed period: ~2200")

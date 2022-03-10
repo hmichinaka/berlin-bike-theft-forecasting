@@ -11,7 +11,7 @@ def app():
     st.title('Accidents - Clusters')
     st.markdown("#### Cluster analysis over the bike accidents between 01.01.2018 and 31.12.2020.")
 
-#   create cluster_gdf (=hotspots) 
+#   create cluster_gdf (=hotspots)
     #loading df from csv
     cluster_gdf = pd.read_csv('./data/cluster_gdf.csv')
     #turn polygon column into GeoSeries
@@ -21,9 +21,9 @@ def app():
     #
     cluster_gdf = cluster_gdf.drop(columns='Unnamed: 0')
     #
-    cluster_gdf.crs = {'init': 'epsg:4326'}    
+    cluster_gdf.crs = {'init': 'epsg:4326'}
 
-#   create final_df (=greenlanes) 
+#   create final_df (=greenlanes)
     #all API addresses that need to be extracted
     url1 = 'https://www.infravelo.de/api/v1/projects/'
     url2 = 'https://www.infravelo.de/api/v1/projects/50/50/'
@@ -86,7 +86,7 @@ def app():
     davy = first_green.T
     type(davy[0][0])
     #
-    def crazy(my_string):    
+    def crazy(my_string):
         res = my_string.split(',0 ')
         l = []
         for i, element in enumerate(res):
@@ -96,8 +96,8 @@ def app():
             for j in range(temp_length):
                 #res[i][j] = float(res[i][j])
                 res2.insert(0,float(res[i][j]))
-                
-            if temp_length == 2:    
+
+            if temp_length == 2:
                 l.append(tuple(res2))
         pd.DataFrame(l)
         return l
@@ -110,8 +110,8 @@ def app():
     #
     final_df = final_df.drop(columns=[
     'costs', 'link', 'companyConstruction', 'apiLink', 'owner',
-    'districts', 'milestones', 'types', 'categories', 'image', 
-    'imagesCurrent', 'imagesBefore', 'kml', 'additionalInformation', 
+    'districts', 'milestones', 'types', 'categories', 'image',
+    'imagesCurrent', 'imagesBefore', 'kml', 'additionalInformation',
     'additionalHtmlContent', ])
     #
     final_df = final_df.rename(columns={0: "coordinates"})
