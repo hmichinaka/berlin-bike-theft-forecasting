@@ -17,8 +17,8 @@ def app():
 #####HOME######
     st.title("cycle_safe(berlin) - helping to keep you and your bike safe")
 
-    st.write("Visual Dashboard for bike accident, bike traffic and bike theft in Berlin")
-    st.write("Experimental Bike Theft Forecasting by using a neural network model")    
+    st.write("- Visual Dashboard for bike accident, bike traffic and bike theft in Berlin")
+    st.write("- Experimental Bike Theft Forecasting by using a neural network model")    
     
 #    st.write("How can we use Machine Learning to mitigate")
 #    st.write("1. Bike theft risk")
