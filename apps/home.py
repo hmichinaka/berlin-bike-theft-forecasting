@@ -7,8 +7,8 @@ def app():
     st.title("cycle_safe(berlin) - helping to keep you and your bike safe")
 
     st.markdown("##### How can we use Machine Learning to mitigate")
-    st.markdown("##### 1. Bike theft risk")
-    st.markdown("##### 2. Bike accident risk")
+    st.markdown("###### 1. Bike theft risk")
+    st.markdown("###### 2. Bike accident risk")
 
     st.image("./images/BikeTheft.png", caption='bike theft')
 
