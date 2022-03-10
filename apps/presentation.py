@@ -10,7 +10,6 @@ from streamlit_folium import folium_static
 from dataclasses import dataclass
 from apps.predict import pred_ts_chart, prediction_by_Bezirk, predict_next_day
 import json
-from PIL import Image
 
 
 def app():
@@ -19,19 +18,17 @@ def app():
 
     st.write("We offers you the following information in the visualized dashboard:")
     st.write("- Bike Traffic: Check out our mobility map when people use Bike Sharing service from 3 mil. of data points ")    
+bike distribution and mobility throout a day
     st.write("- Bike Accident: Check our cluster analysis for the places where accidents happen often")    
     st.write("- Bike Theft: Experimental Bike Theft Forecasting by using a neural network model")    
     
 #    st.write("How can we use Machine Learning to mitigate")
 #    st.write("1. Bike theft risk")
 #    st.write("2. Bike accident risk")
-
-    image = Image.open('./images/BikeTheft.png')
-    st.image(image, caption='bike theft')
+    st.image("./images/BikeTheft.jpg")
 
     st.markdown("### The Team")
-    image2 = Image.open('./images/team.jpg')
-    st.image(image2, caption='The Team')    
+    st.image("./images/team.jpg")
 
     st.write("Hitoshi Michinaka [Linkedin](https://www.linkedin.com/in/hmichinaka/)")
     st.write("Dominik Abratanski [Linkedin](https://www.linkedin.com/in/dominikabratanski/)")
