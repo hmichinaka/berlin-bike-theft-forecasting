@@ -17,7 +17,7 @@ def app():
 #####HOME######
     st.title("cycle_safe(berlin) - helping to keep you and your bike safe")
 
-    st.write("We offers you the following visualized dashboard:")
+    st.write("We offers you the following information in the visualized dashboard:")
     st.write("- Bike Traffic: Check out our mobility map when people use Bike Sharing service from 3 mil. of data points ")    
     st.write("- Bike Accident: Check our cluster analysis for the places where accidents happen often")    
     st.write("- Bike Theft: Experimental Bike Theft Forecasting by using a neural network model")    
@@ -30,8 +30,8 @@ def app():
     st.image(image, caption='bike theft')
 
     st.markdown("### The Team")
-    image = Image.open('./images/team.jpg')
-    
+    image2 = Image.open('./images/team.jpg')
+    st.image(image2, caption='The Team')    
 
     st.write("Hitoshi Michinaka [Linkedin](https://www.linkedin.com/in/hmichinaka/)")
     st.write("Dominik Abratanski [Linkedin](https://www.linkedin.com/in/dominikabratanski/)")
