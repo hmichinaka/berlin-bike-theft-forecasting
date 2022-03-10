@@ -39,7 +39,7 @@ class MultiApp:
         })
 
     def run(self):
-        st.sidebar.title("cycle_safe(berlin)")
+        st.sidebar.title("cycle_safe(berlin) 🚲")
         st.markdown("## ")
         app = st.sidebar.radio(
             'Go To',
