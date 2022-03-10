@@ -7,7 +7,7 @@ import pickle
 import numpy as np
 
 def app():
-    st.title('1. Accidents - Yearly')
+    st.title('Accidents - Yearly')
     st.markdown("#### Yearly bike accident counts between 01.01.2018 and 31.12.2020")
 
     file = open('./pickle/map_yearly_accident.pkl', 'rb')

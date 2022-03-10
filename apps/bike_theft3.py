@@ -3,7 +3,7 @@ import plotly.express as px
 
 def app():
     '''Bike Theft EDA'''
-    st.title('3 Thefts - EDA')
+    st.title('Thefts - EDA')
     st.write("Bike theft EDA")
 
 #1. Stats about bike theft:

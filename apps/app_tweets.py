@@ -14,7 +14,7 @@ def theTweet(tweet_url):
     return res
 
 def app():
-    st.title('Tweets')
+
     client = tweepy.Client(bearer_token='AAAAAAAAAAAAAAAAAAAAAOpRZwEAAAAA7FNAJekf0XHje2UC7t2uvZier5I%3DDBUMPAglhoB4TZoJPYQrWqFXR90kiBa6gdxIZCX0Vnb3u60BRs')
 
     #query tweets on bikes/berlin/theft

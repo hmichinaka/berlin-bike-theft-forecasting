@@ -6,7 +6,7 @@ from streamlit_folium import folium_static
 import pickle
 
 def app():
-    st.title('1. Accidents - Clusters')
+    st.title('Accidents - Clusters')
     st.markdown("#### Cluster analysis over the bike accidents between 01.01.2018 and 31.12.2020.")
 
     # load dataframes
@@ -20,7 +20,7 @@ def app():
     file2 = open('./pickle/greenlane_df.pickle', 'rb')
     final_df = pickle.load(file2)
     file2.close()
-    
+
     #grouping final_df
     completed = final_df.coordinates[final_df.status == 'completed']
     under_construction = final_df.coordinates[final_df.status == 'under construction']
@@ -43,5 +43,5 @@ def app():
 
     # display map
     folium_static(m)
-    
+
     st.markdown("Accidents clusters were modelled with [DBSCAN](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html).")

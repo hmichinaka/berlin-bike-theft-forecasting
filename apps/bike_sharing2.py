@@ -5,8 +5,8 @@ import pickle
 
 def app():
 #    st.cache
-    st.title('2 Locations - Hourly')
-    st.write("Animated hourly sharing bike loactions between 24.02.2022 - 09.03.2022 (14 days)")
+    st.title('Locations - Hourly')
+    st.markdown("#### Animated hourly shared bike loactions between 24.02.2022 - 09.03.2022")
 
 #    file = open('./pickle/map_hourly_location.pkl', 'rb')
 #    object_file = pickle.load(file)
@@ -36,6 +36,5 @@ def app():
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
     st.plotly_chart(fig)
 
-    st.write("- Relative ratio of parked NextBike in each area")
-    st.write("- 0 = average number of NextBike")
-    st.write("Data Source: NextBike live location API")
+    st.write("- Relative ratio of parked NextBikes in each area")
+    st.write("- 0 = average number of NextBikes in each area")
