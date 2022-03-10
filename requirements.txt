@@ -51,5 +51,9 @@ uvicorn
 streamlit
 streamlit-folium
 
-# tweets
+# twitter
 tweepy
+
+#visualisation
+plotly
+
