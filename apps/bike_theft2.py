@@ -4,21 +4,26 @@ from apps.predict import pred_ts_chart, prediction_by_Bezirk, predict_next_day
 import plotly.express as px
 import json
 
+
 def app():
     '''Bike Theft Forecast'''
     st.title('3 Thefts - Prediction')
-    st.write("Bike theft prediction / Time Series - Machine Leaerning model")
+    st.write("Bike theft prediction / Time Series - Machine Learning model")
 
 #1. Line chart showing last 31 days + predicted number of stolen bikes for tomorrow
 # ---> pred_ts_chart() function from predict.py
 
     fig = pred_ts_chart()
     st.plotly_chart(fig)
+    st.write("Data Source: Polizei Berlin")
+
 
 #2. Map showing predicted number of bikes stolen per Bezirk for tomorrow (build it from the provided df)
 # ---> prediction_by_Bezirk() function from predict.py
+
     pred_date = predict_next_day()["date_reported"][0]
     st.title(f"Predicted number of stolen bikes on {pred_date:%d.%m.%Y} by Bezirk")
+
 
     f = open('raw_data/bezirksgrenzen.geojson')
     geojson_berlin = json.load(f)
@@ -39,7 +44,7 @@ def app():
                                featureidkey='Bezirk', locations='Bezirk',
                                color='Prediction_total',
                                range_color = [0, 10],
-                               hover_name='Bezirk_name',
+                               #hover_name='Bezirk_name',
                                color_continuous_scale="OrRd",
                                mapbox_style="open-street-map",
                                zoom=8.5, opacity=0.8,

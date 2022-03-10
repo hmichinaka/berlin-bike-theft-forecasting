@@ -3,15 +3,24 @@ import pandas as pd
 import folium
 import geopandas as gpd
 from streamlit_folium import folium_static
+import pickle
 
 def app():
     st.title('1. Accidents - Clusters')
     st.write("Cluster analysis over the bike accidents between 01.01.2018 and 31.12.2020 (3 years).")
 
     # load dataframes
-    cluster_gdf = pd.read_pickle('data/cluster_gdf.pickle')
-    final_df = pd.read_pickle('data/greenlane_df.pickle')
+#    cluster_gdf = pd.read_pickle('./pickle/cluster_gdf.pickle')
+#    final_df = pd.read_pickle('./pickle/greenlane_df.pickle')
 
+    file1 = open('./pickle/cluster_gdf.pickle', 'rb')
+    cluster_gdf = pickle.load(file1)
+    file1.close()
+
+    file2 = open('./pickle/greenlane_df.pickle', 'rb')
+    final_df = pickle.load(file2)
+    file2.close()
+    
     #grouping final_df
     completed = final_df.coordinates[final_df.status == 'completed']
     under_construction = final_df.coordinates[final_df.status == 'under construction']

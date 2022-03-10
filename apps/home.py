@@ -1,26 +1,23 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
-from apps.create_data import create_table
+from PIL import Image
+
 
 def app():
-    st.title('Home')
-    #st.title('Berlin Bike Accident and Theft Predictor ')
 
-    st.write("cycle_safe(berlin) - Information to help you to cycle safely")
+    st.title("cycle_safe(berlin) - helping to keep you and your bike safe")
 
-    st.write("1. What is the risk of my bike being stolen in Berlin, and how to to avoid it")
-    st.write("2. Which are the most dangerous roads and intersection in Berlin")
+    st.write("How can we use Machine Learning to mitigate")
+    st.write("1. Bike theft risk")
+    st.write("2. Bike accident risk")
 
-    st.write("How can we use Machine Learning to mitigate these risks?")
+    image = Image.open('./images/BikeTheft.png')
+    st.image(image, caption='bike theft')
 
-    st.write("Data was aquired from 3 sources")
-    st.write("  [Nextbike](https://www.nextbike.de/en/berlin/)")
-    st.write("  Berlin Accident Data")
-    st.write("  Bike Theft Data")
+    st.markdown("### The Team")
 
-    st.markdown("### Sample Data")
-    #df = create_table()
-    #st.write(df)
-
-    st.write('Navigate to `Visualisation` pages to visualize the data')
+    st.write("Hitoshi Michinaka [Linkedin](https://www.linkedin.com/in/hmichinaka/)")
+    st.write("Dominik Abratanski [Linkedin](https://www.linkedin.com/in/dominikabratanski/)")
+    st.write("Lukas Hartung [Linkedin](https://www.linkedin.com/in/lukas-h-0438578b/)")
+    st.write("Marlon Deus [Linkedin](https://www.linkedin.com/in/marlon-deus-0a37031b4/)")
+    st.write("Paul Roberts [Linkedin](https://www.linkedin.com/in/paul-roberts-871a6790/)")
+    st.write("Jakob Hohenstein [Linkedin](https://www.linkedin.com/in/jakob-hohenstein-53667914a/)")

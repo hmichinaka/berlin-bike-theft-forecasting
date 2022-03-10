@@ -8,12 +8,12 @@ import numpy as np
 
 def app():
     st.title('1. Accidents - Yearly')
-    st.write("Yearly bike accident coutns between 01.01.2018 and 31.12.2020 (3 years)")
+    st.write("Yearly bike accident counts between 01.01.2018 and 31.12.2020 (3 years)")
 
     file = open('./pickle/map_yearly_accident.pkl', 'rb')
-    object_file = pickle.load(file)
+    accidents_yearly = pickle.load(file)
     file.close()
-    st.plotly_chart(object_file)
+    st.plotly_chart(accidents_yearly)
 
     st.write("Data Source: Amt für Statistik Berlin-Brandenburg")
     df = pd.DataFrame(np.array(
