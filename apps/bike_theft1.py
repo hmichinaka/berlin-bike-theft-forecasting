@@ -3,7 +3,7 @@ from apps.theft_data import bikes_stolen_365, theft_frequency, mean_estimated_va
 import pickle
 
 def app():
-    st.title('3 Bike Thefts Berlin - Facts')
+    st.title('Bike Thefts Berlin - Facts')
 
     last_date = get_last_date()
 

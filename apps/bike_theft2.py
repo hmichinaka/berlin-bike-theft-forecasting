@@ -7,7 +7,7 @@ import json
 
 def app():
     '''Bike Theft Forecast'''
-    st.title('3 Thefts - Prediction')
+    st.title('Thefts - Prediction')
 
     pred_date = predict_next_day()["date_reported"][0]
 #1. Line chart showing last 31 days + predicted number of stolen bikes for tomorrow
