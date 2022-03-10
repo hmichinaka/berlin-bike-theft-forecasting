@@ -6,10 +6,10 @@ def app():
 
     st.title("cycle_safe(berlin) - helping to keep you and your bike safe")
 
-    st.write("We offer the following visualized dashboards:")
-    st.write("- Bike Traffic: Bike distribution map gives you an idea about bike traffic throughout the day")    
-    st.write("- Bike Accident: Cluster analysis shows you where the accident hot spots are")    
-    st.write("- Bike Theft: Data analysis and forecasting thefts by districts might save your bike")
+    st.markdown("We offer the following visualized dashboards:")
+    st.markdown("- Bike Traffic: Bike distribution map gives you an idea about bike traffic throughout the day")    
+    st.markdown("- Bike Accident: Cluster analysis shows you where the accident hot spots are")    
+    st.markdown("- Bike Theft: Data analysis and forecasting thefts by districts might save your bike")
 
     st.image("./images/BikeTheft.png")
 
