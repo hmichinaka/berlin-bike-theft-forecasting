@@ -10,10 +10,33 @@ from streamlit_folium import folium_static
 from dataclasses import dataclass
 from apps.predict import pred_ts_chart, prediction_by_Bezirk, predict_next_day
 import json
+from PIL import Image
+
 
 def app():
+
+    st.title("cycle_safe(berlin) - helping to keep you and your bike safe")
+
+    st.write("Visual Dashboard for bike accident, bike traffic and bike theft in Berlin")
+    st.write("Experimental Bike Theft Forecasting by using a neural network model")    
     
-    st.title('1. Accidents - Yearly')
+#    st.write("How can we use Machine Learning to mitigate")
+#    st.write("1. Bike theft risk")
+#    st.write("2. Bike accident risk")
+
+    image = Image.open('./images/BikeTheft.png')
+    st.image(image, caption='bike theft')
+
+    st.markdown("### The Team")
+
+    st.write("Hitoshi Michinaka [Linkedin](https://www.linkedin.com/in/hmichinaka/)")
+    st.write("Dominik Abratanski [Linkedin](https://www.linkedin.com/in/dominikabratanski/)")
+    st.write("Lukas Hartung [Linkedin](https://www.linkedin.com/in/lukas-h-0438578b/)")
+    st.write("Marlon Deus [Linkedin](https://www.linkedin.com/in/marlon-deus-0a37031b4/)")
+    st.write("Paul Roberts [Linkedin](https://www.linkedin.com/in/paul-roberts-871a6790/)")
+    st.write("Jakob Hohenstein [Linkedin](https://www.linkedin.com/in/jakob-hohenstein-53667914a/)")
+#################  
+    st.title('1.1 Accidents - Yearly')
     st.write("Yearly bike accident counts between 01.01.2018 and 31.12.2020 (3 years)")
 
     file = open('./pickle/map_yearly_accident.pkl', 'rb')
@@ -30,7 +53,7 @@ def app():
     st.table(df)
 
 ###############
-    st.title('1. Accidents - Hourly')
+    st.title('1.2 Accidents - Hourly')
     st.write("Animated hourly bike accidents between 01.01.2018 and 31.12.2020 (3 years)")
 
 #    file = open('./pickle/map_hourly_accident.pkl', 'rb')
@@ -65,7 +88,7 @@ def app():
     st.write("- 100 = average, 0 = zero accident")
     st.write("Data Source: Amt für Statistik Berlin-Brandenburg")
 ###############
-    st.title('2 Locations - Area')
+    st.title('2.1 Locations - Area')
     st.write("Sharing bike locations by area between 24.02.2022 and 09.03.2022 (14 days)")
 
     file = open('./pickle/map_avg_location.pkl', 'rb')
@@ -77,7 +100,7 @@ def app():
     st.write("Data Source: NextBike live location API")    
 
 ###############
-    st.title('2 Locations - Hourly')
+    st.title('2.2 Locations - Hourly')
     st.write("Animated hourly sharing bike loactions between 24.02.2022 - 09.03.2022 (14 days)")
 
 
@@ -109,7 +132,7 @@ def app():
     st.write("Data Source: NextBike live location API")
     
 #################
-    st.title('3 Thefts - Area')
+    st.title('3.1 Thefts - Area')
     st.write("Total bike theft counts by area between 01.01.2021 and 02.03.2022 (14 months)")
 
     file = open('./pickle/map_total_theft.pkl', 'rb')
@@ -119,7 +142,7 @@ def app():
 
     st.write("Data Source: Polizei Berlin")
 ##############
-    st.title('3 Thefts - Prediction')
+    st.title('3.2 Thefts - Prediction')
     st.write("Bike theft prediction / Time Series - Machine Learning model")
 
 #1. Line chart showing last 31 days + predicted number of stolen bikes for tomorrow
