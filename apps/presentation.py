@@ -16,11 +16,10 @@ def app():
 #####HOME######
     st.title("cycle_safe(berlin) - helping to keep you and your bike safe")
 
-    st.write("We offers you the following information in the visualized dashboard:")
-    st.write("- Bike Traffic: Check out our mobility map when people use Bike Sharing service from 3 mil. of data points ")    
-    #bike distribution and mobility throout a day
-    st.write("- Bike Accident: Check our cluster analysis for the places where accidents happen often")    
-    st.write("- Bike Theft: Experimental Bike Theft Forecasting by using a neural network model")    
+    st.write("We offer the following visualized dashboards:")
+    st.write("- Bike Traffic: Bike distribution map gives you an idea about bike traffic throughout the day")    
+    st.write("- Bike Accident: Cluster analysis shows you where the accident hot spots are")    
+    st.write("- Bike Theft: Data A Forecasting theft by districts")    
     
 #    st.write("How can we use Machine Learning to mitigate")
 #    st.write("1. Bike theft risk")
