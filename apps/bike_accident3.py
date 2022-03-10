@@ -7,7 +7,7 @@ import pickle
 
 def app():
     st.title('1. Accidents - Clusters')
-    st.write("Cluster analysis over the bike accidents between 01.01.2018 and 31.12.2020 (3 years).")
+    st.markdown("#### Cluster analysis over the bike accidents between 01.01.2018 and 31.12.2020.")
 
     # load dataframes
 #    cluster_gdf = pd.read_pickle('./pickle/cluster_gdf.pickle')
