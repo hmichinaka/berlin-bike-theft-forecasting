@@ -7,8 +7,10 @@ import datetime
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import streamlit as st
 
 # Read in data from the Berlin Polizei URL
+@st.experimental_memo
 def load_data():
     """Read in the most recent bike theft data from Polizei Berlin and return
     a pandas dataframe """
@@ -207,3 +209,13 @@ def hourly_count_stolen_bikes():
                 labels={"hour_theft_start": "Assumed hour of theft", "count_stolen": "Number of stolen bikes"})
 
     return fig
+
+def get_last_date():
+    df = load_data()
+    df["date_reported"] = pd.to_datetime(df["ANGELEGT_AM"], format='%d.%m.%Y')
+    last_date = df["date_reported"].max().date()
+    return last_date
+
+
+if __name__ == "__main__":
+    get_last_date()
