@@ -23,6 +23,7 @@ google-cloud-storage
 mlflow
 s3fs
 requests
+re
 
 # utilities
 six>=1.14
