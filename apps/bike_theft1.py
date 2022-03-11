@@ -11,8 +11,8 @@ def app():
     st.markdown(f"##### `Every {freq} minutes` a bike got reported stolen in Berlin in the last 365 days.")
     total_stolen = bikes_stolen_365()
     st.markdown(f"##### In total `{total_stolen:,} bikes` got reported stolen in Berlin in the last 365 days.")
-    mean_value = mean_estimated_value()
-    st.markdown(f"##### The `mean value` of bikes, that got reported stolen in the last 365 days was `{mean_value} €`.")
+    #mean_value = mean_estimated_value()
+    #st.markdown(f"##### The `mean value` of bikes, that got reported stolen in the last 365 days was `{mean_value} €`.")
 
     st.markdown('##')
     st.markdown(f"##### Number of stolen bikes by 'Kiez' between 01.01.2021 and today")
