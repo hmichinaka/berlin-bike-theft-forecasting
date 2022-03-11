@@ -3,7 +3,7 @@ import base64
 
 def app():
   """### gif from local file"""
-  file_ = open("./images/location_gif", "rb")
+  file_ = open("./images/location_gif.gif", "rb")
   contents = file_.read()
   data_url = base64.b64encode(contents).decode("utf-8")
   file_.close()
