@@ -26,6 +26,7 @@ def app():
                                animation_frame="hour",
                                color_continuous_midpoint = 0,
                                hover_name='PLR_NAME',
+                               hover_data={"PLR_ID":False, 'hour':True},
                                color_continuous_scale="OrRd",
                                mapbox_style="open-street-map",
                                zoom=9, opacity=0.8,
