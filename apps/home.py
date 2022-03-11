@@ -15,13 +15,12 @@ def app():
 #    st.markdown("##### Bike Location: Bike distribution map gives you an idea about bike traffic throughout the day")
 #    st.markdown("##### Bike Accident: Cluster analysis shows you where the accident hot spots are")
 #    st.markdown("##### Bike Theft: Data analysis and forecasting thefts by districts might save your bike")
-    st.image("./images/BikeTheft.png", width = 600)    
+    st.image("./images/BikeTheft.png")    
     
     st.markdown("####")
 
     st.markdown("### The Team")
     st.image("./images/team.jpg")
-             #, width = 600)
 
     st.markdown("##### Hitoshi Michinaka [Linkedin](https://www.linkedin.com/in/hmichinaka/)")
     st.markdown("##### Dominik Abratanski [Linkedin](https://www.linkedin.com/in/dominikabratanski/)")
