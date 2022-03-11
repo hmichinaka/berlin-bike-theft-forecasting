@@ -20,7 +20,8 @@ def app():
     st.markdown("####")
 
     st.markdown("### The Team")
-    st.image("./images/team.jpg", width = 600)
+    st.image("./images/team.jpg")
+             #, width = 600)
 
     st.markdown("##### Hitoshi Michinaka [Linkedin](https://www.linkedin.com/in/hmichinaka/)")
     st.markdown("##### Dominik Abratanski [Linkedin](https://www.linkedin.com/in/dominikabratanski/)")
