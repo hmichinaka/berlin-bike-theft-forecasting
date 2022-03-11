@@ -9,8 +9,8 @@ def app():
   file_.close()
   
   st.title('Accidents - Hourly (GIF)')
-#  st.markdown("#### Animated hourly shared bike loactions between 24.02.2022 - 09.03.2022")
-  
+  st.markdown("#### Animated hourly bike accidents between 01.01.2018 and 31.12.2020")
+    
   st.markdown(
       f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
       unsafe_allow_html=True,
