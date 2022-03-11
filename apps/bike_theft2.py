@@ -47,7 +47,6 @@ def app():
                                color='Prediction_total',
                                range_color = [0, 10],
                                hover_name='Bezirk_name',
-                               hover_data={"PLR_ID":False, 'Prediction_total':True},
                                color_continuous_scale="OrRd",
                                mapbox_style="open-street-map",
                                zoom=8.5, opacity=0.8,
