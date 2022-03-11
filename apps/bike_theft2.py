@@ -46,7 +46,7 @@ def app():
                                featureidkey='Bezirk', locations='Bezirk',
                                color='Prediction_total',
                                range_color = [0, 10],
-                               #hover_name='Bezirk_name',
+                               hover_name='Bezirk_name',
                                color_continuous_scale="OrRd",
                                mapbox_style="open-street-map",
                                zoom=8.5, opacity=0.8,
