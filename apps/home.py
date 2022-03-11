@@ -9,11 +9,14 @@ def app():
 
     st.markdown("####")
     st.markdown("### We offer the following visualized dashboards:")
-    st.markdown("##### Bike Location: Bike distribution map gives you an idea about bike traffic throughout the day")
-    st.markdown("##### Bike Accident: Cluster analysis shows you where the accident hot spots are")
-    st.markdown("##### Bike Theft: Data analysis and forecasting thefts by districts might save your bike")
-    st.image("./images/BikeTheft.png")
-
+    st.markdown('- Location: Bike movements througout the day by area/time')
+    st.markdown('- Hotspots and bike lanes')
+    st.markdown('- Actual and forecasted thefts')
+#    st.markdown("##### Bike Location: Bike distribution map gives you an idea about bike traffic throughout the day")
+#    st.markdown("##### Bike Accident: Cluster analysis shows you where the accident hot spots are")
+#    st.markdown("##### Bike Theft: Data analysis and forecasting thefts by districts might save your bike")
+    st.image("./images/BikeTheft.png")    
+    
     st.markdown("####")
 
     st.markdown("### The Team")
