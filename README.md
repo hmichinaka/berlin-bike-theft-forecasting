@@ -27,11 +27,17 @@ Predictive Modeling (forecasting next day's bike theft count in Berlin with time
 APIs (fetiching NextBike data for "Locations" part; obtaining latest bike tweets via Twitter API)
 Streamlit (app was deployed via Streamlit Cloud)
 
-## Repository overview
 
-
-## Running instructions
-
+## Instructions to deploy online
+1. Register on https://streamlit.io/cloud
+2. Sign in to https://streamlit.io/cloud
+3. Then fork this repository
+4. Go back to Streamlit and click "New app"
+5. Then click "Paste GitHub URL"
+6. Copy this link "https://github.com/YOUR_GITHUB_NAME/berlin-bike-theft-forecasting/blob/master/app.py" and replace YOUR_GITHUB_NAME with yours
+7. Paste it to "GitHub URL" on Streamlit
+8. Click "Deploy!"
+9. After a few minutes your app is live!
 
 ## About
 
