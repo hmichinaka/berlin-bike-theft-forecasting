@@ -72,6 +72,10 @@ def pred_ts_chart():
     chart_df.rename(columns={0:"total"}, inplace=True)
 
     # add the predicted value as the last value
+    chart_df.iloc[-1, 1] = pred_df["total"][0]
+    
+    chart_df["date"] = pd.to_datetime(chart_df["date"])
+
     fig = px.line(chart_df, x="date", y="total",
              labels = {"date": "date",
                       "total": "Number of reported stolen bikes"})
