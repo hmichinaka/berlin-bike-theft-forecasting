@@ -34,7 +34,7 @@ def app():
 
     df = prediction_by_Bezirk()
     df.reset_index(inplace=True)
-    df['Prediction_total'] = df['Prediction_total'].apply(lambda x: round(x, 2))
+    df['Predicted_theft'] = df['Prediction_total'].apply(lambda x: round(x, 2))
     df['Bezirk'] = df['Bezirk'].apply(lambda x: '0' + str(x))
     d = {'001':'Mitte', '002':'Friedrichshain-Kreuzberg', '003':'Pankow',
                          '004':'Charlottenburg-Wilmersdorf','005':'Spandau','006':'Steglitz-Zehlendorf',
@@ -44,9 +44,10 @@ def app():
 
     fig = px.choropleth_mapbox(df, geojson=geojson_berlin,
                                featureidkey='Bezirk', locations='Bezirk',
-                               color='Prediction_total',
+                               color='Predicted_theft',
                                range_color = [0, 10],
                                hover_name='Bezirk_name',
+                               hover_data={"Bezirk":False, 'Predicted_theft':True},
                                color_continuous_scale="OrRd",
                                mapbox_style="open-street-map",
                                zoom=8.5, opacity=0.8,
