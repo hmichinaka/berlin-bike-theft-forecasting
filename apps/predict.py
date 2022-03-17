@@ -28,7 +28,7 @@ def get_pred_array():
     # read in newest dataset from the URL
     df = create_modelling_dataframe()
     # only keep last 31 days
-    df = df[-31:]
+    # df = df[-31:]
     #create input array
     X_input = np.expand_dims(df, axis = 0)
     pred_date =  df.index[-1] +  datetime.timedelta(days = 1)
@@ -41,6 +41,9 @@ def predict_next_day():
     for the next day.
     Output: Predicted value and date the prediction refers to"""
     X_input, pred_date = get_pred_array()
+
+    # X_input is the whole times series. We only need the last 31 days for the prediction
+    X_input = X_input[:, -31:, :]
 
     # load model and predict
     model = load_joblib_model()
@@ -65,7 +68,7 @@ def pred_ts_chart():
 
     # create empty dataframe starting 31 days before prediction date to prediction date
     pred_date = pred_df["date_reported"][0]
-    chart_df = pd.DataFrame({'date':pd.date_range(start = pred_date - datetime.timedelta(days=31), end = pred_df["date_reported"][0])})
+    chart_df = pd.DataFrame({'date':pd.date_range(start = pred_date - datetime.timedelta(days=len(X_input)), end = pred_df["date_reported"][0])})
 
     # concatenate the values from X_input to the empty dataframe
     chart_df = pd.concat([chart_df, X_input], axis = 1)
