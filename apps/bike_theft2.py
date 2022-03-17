@@ -13,8 +13,8 @@ def app():
 #1. Line chart showing last 31 days + predicted number of stolen bikes for tomorrow
 # ---> pred_ts_chart() function from predict.py
 
-    st.markdown(f"##### Number of reported stolen bikes in Berlin in the last 31 days and prediction for {pred_date:%d.%m.%Y} (red line)")
-
+    # st.markdown(f"##### Number of reported stolen bikes in Berlin in the last 31 days and prediction for {pred_date:%d.%m.%Y} (red line)")
+    st.markdown(f"##### Number of reported stolen bikes in Berlin since 1.1.2021 and prediction for {pred_date:%d.%m.%Y} (red line)")
     fig = pred_ts_chart()
     st.plotly_chart(fig)
 
