@@ -59,3 +59,5 @@ https://daten.berlin.de/datensaetze/strassenverkehrsunf%C3%A4lle-nach-unfallort-
 **Data source Nextbike:** https://sharedmobility.github.io/Nextbike.html
 
 Data source GreenLane Project: https://www.infravelo.de/api/
+
+Reference code to collect live data: https://github.com/technologiestiftung/bike-sharing
