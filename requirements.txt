@@ -42,7 +42,7 @@ pyproj
 
 # modelling
 keras
-tensorflow
+#tensorflow
 
 # model deployment
 fastapi
