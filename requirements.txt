@@ -42,7 +42,7 @@ geopandas
 #pyproj
 
 # modelling
-keras
+#keras
 tensorflow-cpu
 
 # model deployment
@@ -57,4 +57,4 @@ streamlit-folium
 tweepy
 
 #visualisation
-plotly.express
+plotly
