@@ -42,8 +42,8 @@ geopandas
 #pyproj
 
 # modelling
-#keras
-#tensorflow-cpu
+keras
+tensorflow-cpu
 
 # model deployment
 #fastapi
