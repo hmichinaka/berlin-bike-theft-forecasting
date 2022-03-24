@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
+#import numpy as np
 import streamlit.components.v1 as components
 import requests
 #pip install tweepy
