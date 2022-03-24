@@ -16,7 +16,7 @@ The product contains 4 key elements:
 - Thefts - bike theft data analysis & forecasting next day's bike theft number
 - Berlin bike tweets - lates tweets about bikes in Berlin
 
-Link to the app: https://share.streamlit.io/hmichinaka/berlin-bike-theft-forecasting/app.py
+Link to the app: https://cyclesafeberlin.herokuapp.com
 
 ## Methods used
 
