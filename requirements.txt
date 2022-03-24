@@ -57,4 +57,4 @@ streamlit-folium
 tweepy
 
 #visualisation
-plotly
+plotly.express
