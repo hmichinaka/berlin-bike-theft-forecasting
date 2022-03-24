@@ -17,8 +17,8 @@ def app():
 
     st.markdown("#### Bike accidents in Berlin by year")
     df = pd.DataFrame({
-        '2018':["8,459", "5,192"]
-        '2019':["8,384", "5,005"]
+        '2018':["8,459", "5,192"],
+        '2019':["8,384", "5,005"],
         '2020':["6,701", "5,109"]        
         })
     df.rename(index={0:'Traffic accident without bike', 1:'Traffic accident with bike'}, inplace=True)
