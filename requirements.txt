@@ -43,7 +43,7 @@ geopandas
 
 # modelling
 #keras
-tensorflow-cpu
+#tensorflow-cpu
 
 # model deployment
 #fastapi
