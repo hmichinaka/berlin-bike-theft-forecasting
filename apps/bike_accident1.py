@@ -4,7 +4,7 @@ import pandas as pd
 import geopandas as gpd
 from streamlit_folium import folium_static
 import pickle
-import numpy as np
+#import numpy as np
 
 def app():
     st.title('Accidents - Yearly')
@@ -16,10 +16,11 @@ def app():
     st.plotly_chart(accidents_yearly)
 
     st.markdown("#### Bike accidents in Berlin by year")
-    df = pd.DataFrame(np.array(
-        [["8,459", "8,384", "6,701"],
-        ["5,192", "5,005", "5,109"]]),
-        columns=['2018', '2019', '2020'])
+    df = pd.DataFrame({
+        '2018':["8,459", "5,192"]
+        '2019':["8,384", "5,005"]
+        '2020':["6,701", "5,109"]        
+        })
     df.rename(index={0:'Traffic accident without bike', 1:'Traffic accident with bike'}, inplace=True)
     st.table(df)
 
