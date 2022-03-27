@@ -31,7 +31,7 @@ def app():
     twitter_df["url"] = twitter_df["id"].apply(lambda x: f"https://twitter.com/twitter/statuses/{x}")
 
     # drop duplicated tweets
-    twitter_df.drop_duplicates(subset = "text")
+    twitter_df.drop_duplicates(subset = "text", inplace=True)
 
     #add title
     st.title("Latest tweets about bikes in Berlin")
