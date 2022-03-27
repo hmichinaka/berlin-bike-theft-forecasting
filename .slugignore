@@ -1,2 +1,3 @@
+#The files below will NOT be uploaded to Heroku. It helps to keep the upload limit.
 *.ipynb
 chrome-capture-2022-2-10.gif
