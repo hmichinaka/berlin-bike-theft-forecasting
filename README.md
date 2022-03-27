@@ -16,7 +16,7 @@ The product contains 4 key elements:
 - Thefts - bike theft data analysis & forecasting next day's bike theft number
 - Berlin bike tweets - lates tweets about bikes in Berlin
 
-Link to the app: https://share.streamlit.io/hmichinaka/berlin-bike-theft-forecasting/app.py
+Link to the app: https://cyclesafeberlin.herokuapp.com
 
 ## Methods used
 
@@ -59,3 +59,5 @@ https://daten.berlin.de/datensaetze/strassenverkehrsunf%C3%A4lle-nach-unfallort-
 **Data source Nextbike:** https://sharedmobility.github.io/Nextbike.html
 
 Data source GreenLane Project: https://www.infravelo.de/api/
+
+Reference code to collect live data: https://github.com/technologiestiftung/bike-sharing
