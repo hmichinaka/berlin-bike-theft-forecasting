@@ -17,6 +17,7 @@ The product contains 4 key elements:
 - Berlin bike tweets - lates tweets about bikes in Berlin
 
 Link to the app: https://cyclesafeberlin.herokuapp.com
+Live presentation at Le Wagon: https://youtu.be/lyFH0OvAV9w?t=1095
 
 ## Methods used
 
