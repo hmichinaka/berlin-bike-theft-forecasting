@@ -31,3 +31,4 @@ def app():
 
     st.markdown("####")
     st.markdown("##### ➡️ Git repo: https://github.com/hmichinaka/berlin-bike-theft-forecasting")
+    st.markdown("##### ➡️ Live presentation at Le Wagon: https://youtu.be/lyFH0OvAV9w?t=1095")
